@@ -40,7 +40,8 @@ function changeBackground(){
     title.classList.add('black-font')
    });
    projectText.forEach((text)=>{
-    text.classList.remove('white-font')
+    text.classList.remove('white-font');
+    text.classList.add('black-div-background')
  })
   })
 
@@ -60,7 +61,8 @@ function changeBackground(){
     });
 
     projectText.forEach((text)=>{
-    text.classList.add('white-font')
+    text.classList.add('white-font');
+    text.classList.remove('black-div-background')
     })
   });
 
@@ -79,7 +81,8 @@ function changeBackground(){
     title.classList.remove('white-font')
    });
     projectText.forEach((text)=>{
-    text.classList.remove('white-font')
+    text.classList.remove('white-font');
+    text.classList.remove('black-div-background')
  });
   })
 }
