@@ -33,6 +33,7 @@ body::-webkit-scrollbar{
 .description{
   padding: 21px;
   font-size: 4vh;
+  color: white;
 }
 
 .detail-section{
@@ -54,6 +55,7 @@ body::-webkit-scrollbar{
   font-family: 'Urbanist', sans-serif;
   font-size: 70px;
   text-shadow: 2px 2px 10px black;
+  color: white;
 }
 
 .project-title{
@@ -227,7 +229,7 @@ img{
   
   }
 
-  .projects div{
+  .projects-div{
     height: 150px;
     width: 150px;
     background-color: rgba(255, 255, 0, 0.374);
@@ -296,35 +298,31 @@ img{
 
 /*unassigned classes*/
 
-.white{
-  background-image: none;
-  background-color:  white;
-  color: black;
-
+.white-background{
+  background-image: linear-gradient(160deg, rgb(255, 255, 255) 73%, rgba(185, 107, 107, 0.543));
 }
 
-.black{
-  background-image: none;
-  background-color: black;
+.white-font{
   color: white;
-  text-shadow: 0px 0px 0px white;
-
+  text-shadow: 2px 2px 20px white;
+}
+.black-background{
+  background-image: linear-gradient(160deg, black 73%, rgba(57, 54, 54, 0.543));
+}
+.black-font{
+  color: black;
+  text-shadow: 0px 0px 1px black
 }
 
 .show-color-pallete{
   width: 90px;
 }
 
-.white-font{
-  color: white;
-  text-shadow: 0px 0px 0px;
- 
-}
-.black-font{
-  color: black;
-  text-shadow: 0px 0px 0px white;
+.white-div-background{
+  background-color: rgba(255, 255, 255, 0.676);
 }
 
-.div-background{
-  background-color: rgba(143, 237, 143, 0.543);
+
+.black-div-background{
+  background-color: rgba(0, 0, 0, 0.568);
 }

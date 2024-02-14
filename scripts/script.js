@@ -15,33 +15,72 @@ showColorPallte()
 
 
 function changeBackground(){
-  let bodyElement = document.querySelector('body');
-  let projectDivs = document.querySelectorAll('.project-divs')
-  let introduction = document.querySelector('.introduction')
   let whiteBackground = document.querySelector('.js-white')
   let blackBackground = document.querySelector('.js-black')
-  let defaultBackground = document.querySelector('.default')
+  let defaultBackground = document.querySelector('.default');
+  let bodyElement = document.querySelector('body');
+  let name = document.querySelector('.name')
+  let introduction = document.querySelector('.introduction');
+  let projectTitles = document.querySelectorAll('.project-title');
+  let projectText = document.querySelectorAll('.project-divs');
+  let description = document.querySelector('.description')
 
   whiteBackground.addEventListener('click', ()=>{
-    bodyElement.classList.remove('black');
-    introduction.classList.remove('white-font')
-    bodyElement.classList.add('white');
+    bodyElement.classList.remove('black-background');
+    bodyElement.classList.add('white-background');
+    introduction.classList.remove('white-font');
     introduction.classList.add('black-font');
-    projectDivs.classList.add('div-background')
+    name.classList.remove('white-font');
+    name.classList.add('black-font');
+    description.classList.add('black-font')
+    projectTitles.forEach((title)=>{
+      title.classList.remove('white-font')
+     })
+    projectTitles.forEach((title)=>{
+    title.classList.add('black-font')
+   });
+   projectText.forEach((text)=>{
+    text.classList.remove('white-font')
+ })
   })
 
   blackBackground.addEventListener('click', ()=>{
-    bodyElement.classList.remove('white');
+    bodyElement.classList.remove('white-background');
+    bodyElement.classList.add('black-background');
     introduction.classList.remove('black-font');
-    introduction.classList.add('white-font')
-    bodyElement.classList.add('black')
+    introduction.classList.add('white-font');
+    name.classList.remove('black-font');
+    name.classList.add('white-font');
+    description.classList.remove('black-font');
+    projectTitles.forEach((title)=>{
+      title.classList.remove('black-font')
+      })
+    projectTitles.forEach((title)=>{
+    title.classList.add('white-font')
+    });
+
+    projectText.forEach((text)=>{
+    text.classList.add('white-font')
+    })
   });
 
   defaultBackground.addEventListener('click', ()=>{
-    bodyElement.classList.remove('black');
-    bodyElement.classList.remove('white');
+    bodyElement.classList.remove('white-background');
+    bodyElement.classList.remove('black-background');
     introduction.classList.remove('black-font');
-    introduction.classList.remove('white-font')
+    introduction.classList.remove('white-font');
+    name.classList.remove('black-font');
+    name.classList.remove('white-font');
+    description.classList.remove('black-font');
+    projectTitles.forEach((title)=>{
+      title.classList.remove('black-font')
+     });
+    projectTitles.forEach((title)=>{
+    title.classList.remove('white-font')
+   });
+    projectText.forEach((text)=>{
+    text.classList.remove('white-font')
+ });
   })
 }
 
